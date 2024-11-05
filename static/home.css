@@ -1,0 +1,37 @@
+/* css stypes  general to all elements */
+body {
+  text-align: center;
+}
+#order-tab > * {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#receipt-tab {
+  display: grid;
+  grid-template-columns: 0.25fr 1.5fr 0.75fr;
+}
+#receipt-tab > *,
+#receipt-items > div {
+  grid-column: 1 / span 3;
+  display: inherit;
+  grid-template-columns: inherit;
+}
+/* devices phone and laptop screen */
+@media screen and (max-width: 450px) {
+  body {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 451px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* #receipt-tab > footer {
+    display: inhe;
+  } */
+}
